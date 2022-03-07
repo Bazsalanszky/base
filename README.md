@@ -54,5 +54,5 @@ Ha ezt olvasod, akkor cic'av'av'altozol 0or0okre!!!
 - Ez is
 
 ```java
-System.out.println("Cs'a")
+System.out.println("Cső")
 ```
