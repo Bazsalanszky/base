@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           java-version: 8
+          distribution: 'adopt'
       # Execute Gradle commands in GitHub Actions workflows
       # => https://github.com/marketplace/actions/gradle-command
       - uses: eskatos/gradle-command-action@v2
