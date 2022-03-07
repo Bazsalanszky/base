@@ -12,9 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CicaTeszt {
 
-
     CicaGomb cg;
-
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
