@@ -1,4 +1,3 @@
 dependencies {
     implementation 'junit:junit:4.13.1'
-    compile project(':train-interfaces')
 }
