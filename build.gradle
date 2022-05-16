@@ -17,7 +17,7 @@ subprojects {
       property "sonar.host.url","https://sonarcloud.io"
       property "sonar.sources", "."
       property "sonar.tests","."
-      property "sonar.exclusions", "*build.gradle"
+      property "sonar.exclusions", "*build.gradle","src/main/java/hu/bme/mit/train/controller/TrainControllerImpl.java"
       property "sonar.sourceEncoding", "UTF-8"
       property "sonar.projectKey", "Bazsalanszky_base"
       property "sonar.organization","bazsalanszky"
