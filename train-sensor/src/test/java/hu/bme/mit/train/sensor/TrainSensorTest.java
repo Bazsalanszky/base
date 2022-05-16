@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.*;
 
@@ -28,6 +29,8 @@ public class TrainSensorTest {
         when(controller.getReferenceSpeed()).thenReturn(50);
         sensor.overrideSpeedLimit(100);
         assertFalse(sensor.getAlarmStatus());
+        verify(user,times(0)).setAlarmState(true);
+        assertEquals(100,sensor.getSpeedLimit());
     }
 
     @Test
@@ -35,19 +38,23 @@ public class TrainSensorTest {
         when(controller.getReferenceSpeed()).thenReturn(50);
         sensor.overrideSpeedLimit(-100);
         assert (sensor.getAlarmStatus());
+        verify(user,times(1)).setAlarmState(true);
+        verify(user,times(0)).setAlarmState(false);
     }
 
     @Test
     public void limitAbove500Test() {
         when(controller.getReferenceSpeed()).thenReturn(50);
         sensor.overrideSpeedLimit(600);
-        assert (sensor.getAlarmStatus());
+        verify(user,times(1)).setAlarmState(true);
+        verify(user,times(0)).setAlarmState(false);
     }
 
     @Test
     public void relativeLimitAlarmTest() {
         when(controller.getReferenceSpeed()).thenReturn(150);
         sensor.overrideSpeedLimit(50);
-        assert (sensor.getAlarmStatus());
+        verify(user,times(1)).setAlarmState(true);
+        verify(user,times(0)).setAlarmState(false);
     }
 }
