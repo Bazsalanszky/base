@@ -12,7 +12,6 @@ subprojects {
 
   sonarqube {
     properties {
-      property "sonar.sources", "src"
       property "sonar.sourceEncoding", "UTF-8"
       property "sonar.projectKey", "Bazsalanszky_base"
       property "sonar.organization","bazsalanszky"
