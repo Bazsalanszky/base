@@ -18,6 +18,7 @@ subprojects {
       property "sonar.sources", "."
       property "sonar.tests","."
       property "sonar.exclusions", "src/main/java/hu/bme/mit/train/controller/TrainControllerImpl.java"
+      property "sonar.exclusions", "*build.gradle"
       property "sonar.sourceEncoding", "UTF-8"
       property "sonar.projectKey", "Bazsalanszky_base"
       property "sonar.organization","bazsalanszky"
